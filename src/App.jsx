@@ -958,10 +958,10 @@ function Contact() {
               </a>
             ))}
 
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "0.6rem 1.8rem" }}>
+            {/* <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "0.6rem 1.8rem" }}>
               <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#c8a96e", opacity: 0.35, animation: "pulse 2s ease-in-out infinite" }} />
-              {/* <span className="sans" style={{ fontSize: "0.76rem", color: "#2e2e2e", letterSpacing: "0.05em" }}>Based in Chennai · Open to Remote Projects</span> */}
-            </div>
+              <span className="sans" style={{ fontSize: "0.76rem", color: "#2e2e2e", letterSpacing: "0.05em" }}>Based in Chennai · Open to Remote Projects</span>
+            </div> */}
           </div>
         </div>
       </div>
