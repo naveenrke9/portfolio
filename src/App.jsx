@@ -313,7 +313,6 @@ function FeaturedCard({ project, index }) {
   const videoRef = useRef(null);
   const [vis, setVis] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const isEven = index % 2 === 0;
 
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: 0.06 });
@@ -332,86 +331,141 @@ function FeaturedCard({ project, index }) {
   return (
     <>
       <style>{`
-        .fc-wrap { border-radius:4px; overflow:hidden; }
-        .fc-grid { display:grid; grid-template-columns:1fr 1fr; }
-        .fc-grid-rev > .fc-vid  { order:2; }
-        .fc-grid-rev > .fc-info { order:1; }
+        .fc-wrap { border-radius: 4px; overflow: hidden; }
+
+        /* Always stacked: video on top, content below — on ALL screen sizes */
+        .fc-stack {
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* Video panel — full width, 16:9 ratio */
         .fc-vid {
-          position:relative; overflow:hidden; background:#080808;
-          /* stretch to match sibling height */
-          display:flex; flex-direction:column;
+          position: relative;
+          width: 100%;
+          padding-bottom: 52%;   /* ~16:9, tweak to taste */
+          overflow: hidden;
+          background: #080808;
+          flex-shrink: 0;
         }
-        .fc-vid video, .fc-vid .fc-grad-bg {
-          position:absolute; inset:0; width:100%; height:100%;
-          object-fit:cover; object-position:center;
+        .fc-vid video,
+        .fc-vid .fc-grad-bg {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
         }
+
+        /* Content panel — full width below video */
         .fc-info {
-          padding:clamp(1.8rem,4vw,3rem);
-          display:flex; flex-direction:column; justify-content:center;
-          background:#0a0a0a;
-        }
-        @media(max-width:900px){
-          .fc-grid, .fc-grid-rev {
-            grid-template-columns:1fr !important;
-          }
-          .fc-grid-rev > .fc-vid  { order:0 !important; }
-          .fc-grid-rev > .fc-info { order:0 !important; }
-          .fc-vid { min-height:62vw; }
+          padding: clamp(1.8rem, 4vw, 3rem);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: #0a0a0a;
         }
       `}</style>
-      <div ref={wrapRef} className="featured-card fc-wrap" style={{
-        opacity: vis ? 1 : 0,
-        transform: vis ? "none" : "translateY(40px)",
-        transition: `opacity 0.8s ease ${index * 0.15}s, transform 0.8s ease ${index * 0.15}s`,
-      }}>
-        <div className={`fc-grid${isEven ? "" : " fc-grid-rev"}`}>
 
-          {/* ── Video panel ── */}
+      <div
+        ref={wrapRef}
+        className="featured-card fc-wrap"
+        style={{
+          opacity: vis ? 1 : 0,
+          transform: vis ? "none" : "translateY(40px)",
+          transition: `opacity 0.8s ease ${index * 0.15}s, transform 0.8s ease ${index * 0.15}s`,
+        }}
+      >
+        <div className="fc-stack">
+
+          {/* ── Video panel (full width) ── */}
           <div className="fc-vid">
             {/* gradient background always fills */}
-            <div className="fc-grad-bg" style={{ background: project.gradColors, zIndex: 1 }} />
+            <div
+              className="fc-grad-bg"
+              style={{ background: project.gradColors, zIndex: 1 }}
+            />
 
             {hasVideo && (
-              <video ref={videoRef} src={project.videoSrc} muted loop playsInline style={{ zIndex: 2 }} />
+              <video
+                ref={videoRef}
+                src={project.videoSrc}
+                muted
+                loop
+                playsInline
+                style={{ zIndex: 2 }}
+              />
             )}
 
             {/* cinematic overlay */}
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(7,7,7,0.8) 0%,rgba(7,7,7,0.15) 55%,transparent 100%)", zIndex: 3 }} />
+            <div style={{
+              position: "absolute", inset: 0,
+              background: "linear-gradient(to top,rgba(7,7,7,0.7) 0%,rgba(7,7,7,0.1) 55%,transparent 100%)",
+              zIndex: 3,
+            }} />
 
             {/* number watermark */}
-            <div className="serif" style={{ position: "absolute", top: "1rem", right: "1.5rem", fontSize: "clamp(5rem,10vw,8rem)", fontWeight: 300, color: "rgba(200,169,110,0.06)", lineHeight: 1, pointerEvents: "none", userSelect: "none", zIndex: 4 }}>
+            <div className="serif" style={{
+              position: "absolute", top: "1rem", right: "1.5rem",
+              fontSize: "clamp(5rem,10vw,8rem)", fontWeight: 300,
+              color: "rgba(200,169,110,0.06)", lineHeight: 1,
+              pointerEvents: "none", userSelect: "none", zIndex: 4,
+            }}>
               {project.num}
             </div>
 
             {/* playing badge */}
             {hasVideo && playing && (
-              <div style={{ position: "absolute", bottom: "14px", left: "14px", zIndex: 5, display: "flex", alignItems: "center", gap: "8px" }}>
+              <div style={{
+                position: "absolute", bottom: "14px", left: "14px", zIndex: 5,
+                display: "flex", alignItems: "center", gap: "8px",
+              }}>
                 <PlayingBars color={project.accent} />
-                <span className="sans" style={{ fontSize: "0.58rem", color: project.accent, letterSpacing: "0.12em", textTransform: "uppercase" }}>Playing on loop</span>
+                <span className="sans" style={{
+                  fontSize: "0.58rem", color: project.accent,
+                  letterSpacing: "0.12em", textTransform: "uppercase",
+                }}>Playing on loop</span>
               </div>
             )}
           </div>
 
-          {/* ── Content panel ── */}
+          {/* ── Content panel (full width below) ── */}
           <div className="fc-info">
-            <span className="sans tag-pill" style={{ padding: "3px 10px", borderRadius: "2px", fontSize: "0.6rem", marginBottom: "1.2rem", alignSelf: "flex-start" }}>
+            <span className="sans tag-pill" style={{
+              padding: "3px 10px", borderRadius: "2px",
+              fontSize: "0.6rem", marginBottom: "1.2rem", alignSelf: "flex-start",
+            }}>
               {project.category}
             </span>
 
-            <h3 className="serif" style={{ fontSize: "clamp(1.6rem,2.8vw,2.4rem)", fontWeight: 300, color: "#f0ebe0", lineHeight: 1.15, marginBottom: "0.8rem" }}>
+            <h3 className="serif" style={{
+              fontSize: "clamp(1.6rem,2.8vw,2.4rem)", fontWeight: 300,
+              color: "#f0ebe0", lineHeight: 1.15, marginBottom: "0.8rem",
+            }}>
               {project.name}
             </h3>
 
-            <p className="serif" style={{ fontSize: "1rem", fontStyle: "italic", color: project.accent, marginBottom: "1.2rem", lineHeight: 1.5 }}>
+            <p className="serif" style={{
+              fontSize: "1rem", fontStyle: "italic",
+              color: project.accent, marginBottom: "1.2rem", lineHeight: 1.5,
+            }}>
               {project.tagline}
             </p>
 
-            <p className="sans" style={{ fontSize: "0.86rem", color: "#555", lineHeight: 1.78, marginBottom: "1.6rem" }}>
+            <p className="sans" style={{
+              fontSize: "0.86rem", color: "#555",
+              lineHeight: 1.78, marginBottom: "1.6rem",
+            }}>
               {project.description}
             </p>
 
             <div style={{ marginBottom: "1.6rem" }}>
-              <span className="sans" style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#c8a96e", display: "block", marginBottom: "0.8rem" }}>Results</span>
+              <span className="sans" style={{
+                fontSize: "0.6rem", letterSpacing: "0.2em",
+                textTransform: "uppercase", color: "#c8a96e",
+                display: "block", marginBottom: "0.8rem",
+              }}>Results</span>
               {project.results.map((r, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "5px" }}>
                   <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: project.accent, flexShrink: 0 }} />
@@ -427,12 +481,19 @@ function FeaturedCard({ project, index }) {
             </div>
 
             {project.insta && (
-              <a href={project.insta} target="_blank" rel="noopener noreferrer" className="insta-btn" style={{ alignSelf: "flex-start" }}>
+              <a
+                href={project.insta}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="insta-btn"
+                style={{ alignSelf: "flex-start" }}
+              >
                 <InstaIcon />
                 View on Instagram
               </a>
             )}
           </div>
+
         </div>
       </div>
     </>
