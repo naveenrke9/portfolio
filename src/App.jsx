@@ -506,7 +506,7 @@ function Hero() {
           {/* Profile photo */}
           <div className="profile-ring" style={{ width:"clamp(130px,18vw,200px)", height:"clamp(130px,18vw,200px)", flexShrink:0 }}>
             <div className="profile-ring-inner">
-              <img src="/profile.png" alt="Naveen Rajendran"
+              <img src="/profile.png" alt="Naveen RKE"
                 style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }}
                 onError={e => {
                   // Fallback if image not found
@@ -526,7 +526,7 @@ function Hero() {
               </span>
             </div>
             <h1 className="serif" style={{ fontSize:"clamp(3rem,8vw,7rem)", fontWeight:300, lineHeight:1, letterSpacing:"-0.02em", color:"#f0ebe0", marginBottom:"0.3rem", ...fu(0.25) }}>
-              Naveen<br /><span className="gold-text">Rajendran</span>
+              Naveen<br /><span className="gold-text">RKE</span>
             </h1>
             <p className="sans" style={{ fontSize:"clamp(0.75rem,1.5vw,0.95rem)", color:"#505050", letterSpacing:"0.15em", textTransform:"uppercase", margin:"1.2rem 0 1.6rem", ...fu(0.35) }}>
               Social Media Strategist&nbsp;&nbsp;·&nbsp;&nbsp;Content Marketing Consultant
