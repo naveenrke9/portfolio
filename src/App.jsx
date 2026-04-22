@@ -523,11 +523,11 @@ function Hero() {
 
           {/* Text */}
           <div>
-            <div style={fu(0.15)}>
+            {/* <div style={fu(0.15)}>
               <span className="sans tag-pill" style={{ padding: "4px 14px", borderRadius: "2px", display: "inline-block", marginBottom: "1.4rem" }}>
                 Available for Projects · Chennai, India
               </span>
-            </div>
+            </div> */}
             <h1 className="serif" style={{ fontSize: "clamp(3rem,8vw,7rem)", fontWeight: 300, lineHeight: 1, letterSpacing: "-0.02em", color: "#f0ebe0", marginBottom: "0.3rem", ...fu(0.25) }}>
               Naveen RKE<br /><span className="gold-text"></span>
             </h1>
