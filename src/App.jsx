@@ -172,11 +172,11 @@ const GlobalStyles = () => (
 
 /* ─── Data ───────────────────────────────────────────────────── */
 const METRICS = [
-  { val: "2M+",   label: "Engagement",     sub: "in just 3 months"       },
-  { val: "1.23M", label: "Viral Views",     sub: "single doner campaign"  },
-  { val: "8.5K",  label: "Followers Grown", sub: "organic in 7 months"    },
-  { val: "892K",  label: "Campaign Reach",  sub: "Pasha flagship drive"   },
-  { val: "104K",  label: "Campaign Views",  sub: "Ottomans Diwali launch" },
+  { val: "1.23M+", label: "Viral Views",      sub: "single reel"             },
+  { val: "2M+",    label: "Engagement",        sub: "in 3 months"             },
+  { val: "8.5K",   label: "Followers Grown",   sub: "new brand, 7 months"     },
+  { val: "892K",   label: "Campaign Reach",    sub: "Pasha doner campaign"    },
+  { val: "104K",   label: "Festival Reach",    sub: "Ottomans Diwali"         },
 ];
 
 const PROJECTS = [
@@ -186,10 +186,10 @@ const PROJECTS = [
     accent: "#d4873a",
     gradColors: "radial-gradient(ellipse at 20% 30%,#3d1a00 0%,#1a0800 40%,#070707 70%)",
     name: "Ottomans Turkish Baklava",
-    category: "Brand Strategy · Campaign Design",
-    tagline: "Turning a niche delicacy into a premium gifting experience.",
-    description: "Developed a complete brand-aligned content strategy that repositioned premium Turkish baklava as a luxury Diwali gift — cracking a brand-new market with storytelling and cultural resonance.",
-    results: ["104K+ campaign views", "Premium gifting positioning", "New market penetration"],
+    category: "Social Media Consultant · Content Strategist",
+    tagline: "Positioning baklava as the premium gifting sweet of the season.",
+    description: "Built content aligned with authentic Turkish positioning and developed a Diwali campaign with a clear objective: make baklava a go-to premium gifting choice. Achieved 104K views and drove meaningful brand awareness in a niche, competitive market — while maintaining consistent brand storytelling across all content.",
+    results: ["104K campaign views", "Premium gifting positioning", "Niche market penetration"],
     tags: ["Content Strategy", "Diwali Campaign", "Brand Positioning"],
     videoSrc: "/videos/otto.MOV",
     insta: "https://www.instagram.com/ottomans_baklava?igsh=Zmk4ZGNvMXd0cWcw",
@@ -200,11 +200,11 @@ const PROJECTS = [
     accent: "#3da870",
     gradColors: "radial-gradient(ellipse at 30% 70%,#003d1a 0%,#001a08 40%,#070707 70%)",
     name: "Pasha Burgers & Kebab",
-    category: "Social Media Growth · Video Production",
-    tagline: "From zero to viral — scaling a brand from launch to landmark.",
-    description: "Built the brand identity from scratch, drove explosive growth through strategic content, creative food photography, and a doner video campaign that became a viral moment.",
-    results: ["8.5K followers in 7 months", "2M+ engagement in 3 months", "1.23M views · 892K reach"],
-    tags: ["Growth Strategy", "Video Direction", "Food Photography"],
+    category: "End-to-End Social Media Strategist",
+    tagline: "Launched a brand. Built a following. Made it go viral.",
+    description: "Launched and scaled a new Middle Eastern food brand from August 2025. Led content strategy & execution, authentic doner brand storytelling, Google Business setup, and creative food photography. The result: a viral campaign that hit 1,235,650 views and 892,788 reach — and a community of 8.5K followers built in 7 months.",
+    results: ["8.5K followers in 7 months", "2M+ engagement in 3 months", "1,235,650 views · 892,788 reach"],
+    tags: ["Growth Strategy", "Video Direction", "Food Photography", "Brand Launch"],
     videoSrc: "/videos/pasha.MOV",
     insta: "https://www.instagram.com/pashaburgers?igsh=MXQ3anF4dDVwNXZoYw==",
   },
@@ -214,10 +214,10 @@ const PROJECTS = [
     accent: "#9b8fd4",
     gradColors: "radial-gradient(ellipse at 50% 20%,#1a0d3d 0%,#0d0820 40%,#070707 70%)",
     name: "Cream Story",
-    category: "Seasonal Campaigns · Brand Storytelling",
-    tagline: "Every season, a story worth remembering.",
-    description: "Crafted multi-season campaign arcs for Laban Festival, Christmas, and Summer — using narrative-first content design to build emotional brand loyalty and a consistent visual identity.",
-    results: ["Multi-season execution", "Elevated brand storytelling", "Consistent identity across seasons"],
+    category: "Content Strategist · Social Media Consultant",
+    tagline: "Every season deserves a story worth remembering.",
+    description: "Designed and executed campaigns across Laban Festival, Christmas, and Summer — focused on seasonal storytelling and sharp product positioning. Created content that blends fun, emotion, and brand recall to build lasting audience connection.",
+    results: ["3 seasonal campaigns executed", "Fun + emotion-led content", "Strong brand recall"],
     tags: ["Seasonal Strategy", "Brand Storytelling", "Creative Direction"],
     videoSrc: "/videos/cs.MOV",
     insta: "https://www.instagram.com/creamstory_official?igsh=YTZ2aHoyNHFnOHNy",
@@ -226,25 +226,25 @@ const PROJECTS = [
     isFeatured: false,
     name: "Zum Zum Hotel",
     category: "Social Media Management",
-    desc: "Managed full social presence with brand-aligned content strategy and video marketing execution.",
+    desc: "Social media management and content strategy. Brand-aligned video content marketing for a hospitality brand.",
     tags: ["Social Media", "Video Marketing", "Brand Strategy"],
     insta: "https://www.instagram.com/zumzum.1969?igsh=cjVzY2tjdzhtOXZ3&utm_source=qr",
     icon: "🏨",
   },
   {
     isFeatured: false,
-    name: "TAB Café",
+    name: "Tab Café",
     category: "Brand Positioning · Consulting",
-    desc: "Refined brand positioning and communication strategy to elevate content quality and audience engagement.",
+    desc: "Social media consulting — refined brand positioning and communication tone to elevate content quality and audience connection.",
     tags: ["Brand Consulting", "Content Strategy", "Communication"],
     insta: "https://www.instagram.com/tab.nagercoil?igsh=MWkyZTlibmtoajJiaA==",
     icon: "☕",
   },
   {
     isFeatured: false,
-    name: "Sleek",
-    category: "Creative Production · Fashion",
-    desc: "Directed creative shoots and produced Christmas campaign visuals for a footwear and bags brand.",
+    name: "Sleek (Footwear & Bags)",
+    category: "Content Marketing · Fashion",
+    desc: "Content marketing through shoot and edit. Created high-impact Christmas campaign visuals for a multi-brand footwear and bags label.",
     tags: ["Creative Direction", "Shoot Production", "Fashion"],
     insta: "https://drive.google.com/drive/folders/1CqsbmnhtHGJZdUm54-6fSPqnJSeXBV17",
     icon: "👜",
@@ -254,19 +254,10 @@ const PROJECTS = [
     isFeatured: false,
     name: "FinLit",
     category: "Financial Storytelling · Video",
-    desc: "Simplified complex financial concepts through compelling video production and edited storytelling.",
-    tags: ["Video Production", "Finance Content", "Editing"],
+    desc: "Content strategist and video marketer — built story-driven financial content to make complex concepts accessible and engaging for a wide audience.",
+    tags: ["Video Production", "Finance Content", "Storytelling"],
     insta: "https://www.instagram.com/official.finlit?igsh=eWZ0dHpmamM4aWZw",
     icon: "📊",
-  },
-  {
-    isFeatured: false,
-    name: "Personal Brand",
-    category: "Content Creation · Strategy",
-    desc: "Crafting personal brand content that showcases expertise in social media strategy and growth marketing.",
-    tags: ["Personal Branding", "Content Creation", "Strategy"],
-    insta: "https://www.instagram.com/",
-    icon: "🎯",
   },
 ];
 
@@ -274,12 +265,12 @@ const FEATURED = PROJECTS.filter(p => p.isFeatured);
 const OTHER    = PROJECTS.filter(p => !p.isFeatured);
 
 const SERVICES = [
-  { icon:"◎", title:"Social Media Strategy", desc:"Platform-specific strategies built around growth and engagement." },
-  { icon:"◈", title:"Content Marketing",      desc:"High-impact content that builds brand and drives action."        },
-  { icon:"◉", title:"Campaign Planning",      desc:"End-to-end campaign execution from concept to results."         },
-  { icon:"◇", title:"Brand Storytelling",     desc:"Narratives that make audiences feel something real."            },
-  { icon:"◆", title:"Video Production",       desc:"Creative direction and production for viral-worthy videos."     },
-  { icon:"◐", title:"Creative Direction",     desc:"Visual identity and aesthetic cohesion across channels."        },
+  { icon:"◎", title:"Strategic Thinking",      desc:"Creative execution backed by clear strategy and audience insight."     },
+  { icon:"◈", title:"Brand Storytelling",       desc:"Content that builds positioning, narrative, and emotional recall."     },
+  { icon:"◉", title:"Campaign Ideation",        desc:"End-to-end campaign design from concept through to results."          },
+  { icon:"◇", title:"Social Media Growth",      desc:"Systems that scale brands from zero to momentum, organically."        },
+  { icon:"◆", title:"Video & Content Production",desc:"Creative direction, shoot, edit — built for performance."            },
+  { icon:"◐", title:"Performance-Led Strategy", desc:"Every piece of content measured and iterated for real growth."        },
 ];
 
 /* ─── Playing Bars ───────────────────────────────────────────── */
@@ -345,7 +336,7 @@ function FeaturedCard({ project, index }) {
       transform: vis ? "none" : "translateY(40px)",
       transition: `opacity 0.8s ease ${index*0.15}s, transform 0.8s ease ${index*0.15}s`,
     }}>
-      <div style={{ display:"grid", gridTemplateColumns: "1fr 1fr", minHeight:"420px" }}
+      <div style={{ display:"grid", gridTemplateColumns: "1fr 1fr", minHeight:"480px", alignItems:"stretch" }}
            className={`featured-grid-${isEven ? "normal" : "reverse"}`}>
         <style>{`
           @media (max-width: 900px) {
@@ -359,10 +350,14 @@ function FeaturedCard({ project, index }) {
             .featured-grid-reverse > *:first-child { order: 0; }
             .featured-grid-reverse > *:last-child  { order: 0; }
           }
+          .vid-panel-fill { min-height: 360px; }
+          @media (max-width: 900px) {
+            .vid-panel-fill { min-height: 56vw; }
+          }
         `}</style>
 
         {/* Video / gradient panel */}
-        <div style={{ position:"relative", overflow:"hidden", minHeight:"320px", background:"#080808" }}>
+        <div className="vid-panel-fill" style={{ position:"relative", overflow:"hidden", background:"#080808", display:"flex", flexDirection:"column" }}>
           {/* Gradient background always present */}
           <div style={{ position:"absolute", inset:0, background: project.gradColors, zIndex:1 }} />
 
@@ -371,7 +366,7 @@ function FeaturedCard({ project, index }) {
               ref={videoRef}
               src={project.videoSrc}
               muted loop playsInline
-              style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", zIndex:2 }}
+              style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", zIndex:2 }}
             />
           )}
 
@@ -534,10 +529,10 @@ function Hero() {
               Naveen<br /><span className="gold-text">Rajendran</span>
             </h1>
             <p className="sans" style={{ fontSize:"clamp(0.75rem,1.5vw,0.95rem)", color:"#505050", letterSpacing:"0.15em", textTransform:"uppercase", margin:"1.2rem 0 1.6rem", ...fu(0.35) }}>
-              Social Media Consultant&nbsp;&nbsp;·&nbsp;&nbsp;Content Strategist
+              Social Media Strategist&nbsp;&nbsp;·&nbsp;&nbsp;Content Marketing Consultant
             </p>
-            <p className="serif" style={{ fontSize:"clamp(1rem,2vw,1.4rem)", color:"#c8a96e", fontStyle:"italic", fontWeight:300, maxWidth:"480px", lineHeight:1.55, marginBottom:"2.4rem", ...fu(0.45) }}>
-              "Creativity attracts attention.<br />Strategy converts it into growth."
+            <p className="serif" style={{ fontSize:"clamp(1rem,2vw,1.4rem)", color:"#c8a96e", fontStyle:"italic", fontWeight:300, maxWidth:"520px", lineHeight:1.55, marginBottom:"2.4rem", ...fu(0.45) }}>
+              "Good content gets attention. Strategic content builds brands, communities, and revenue."
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:"0.75rem", ...fu(0.55) }}>
               <button onClick={() => document.getElementById("work")?.scrollIntoView({ behavior:"smooth" })}
@@ -700,31 +695,47 @@ function About() {
           <div style={{ flex:"1 1 340px", opacity:vis?1:0, transform:vis?"none":"translateX(-30px)", transition:"all 0.8s ease" }}>
             <span className="sans" style={{ fontSize:"0.65rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"#c8a96e" }}>About Me</span>
             <h2 className="serif" style={{ fontSize:"clamp(2rem,4vw,3rem)", fontWeight:300, color:"#f0ebe0", marginTop:"0.8rem", marginBottom:"1.4rem", lineHeight:1.1 }}>
-              Where Numbers<br />Meet <span className="gold-text">Narrative</span>
+              Stories People<br />Actually <span className="gold-text">Care About</span>
             </h2>
             <div style={{ width:"40px", height:"1px", background:"#c8a96e", marginBottom:"1.8rem" }} />
             {[
-              "I'm Naveen Rajendran, a Social Media Consultant and Content Strategist helping brands grow through creative storytelling and data-driven marketing.",
-              "With a strong foundation in mathematics, I approach content with both creative intuition and analytical precision — ensuring every campaign delivers real impact, not just aesthetics.",
-              "I specialize in crafting brand-aligned content strategies, executing high-performing campaigns, and scaling digital presence across diverse industries."
+              "I'm Naveen R, a social media strategist focused on turning brands into stories people actually care about.",
+              "I don't just create content — I build positioning, narrative, and performance-driven ecosystems across platforms.",
+              "My work sits at the intersection of creativity, audience psychology, and data, where every post, reel, and campaign serves a clear purpose — whether it's awareness, engagement, or conversion.",
+              "With experience across F&B, lifestyle, retail, and financial consulting, I've also worked as a Content Strategist at a company owned by Madan Gowri, contributing to YouTube content for a large-scale audience.",
             ].map((t,i) => <p key={i} className="sans" style={{ fontSize:"0.88rem", color:"#505050", lineHeight:1.8, marginBottom:"1rem" }}>{t}</p>)}
+            <div style={{ marginTop:"1.4rem" }}>
+              <span className="sans" style={{ fontSize:"0.6rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"#c8a96e", display:"block", marginBottom:"0.8rem" }}>I specialize in</span>
+              {["Brand storytelling through content","Campaign ideation & execution","Social media growth systems","Performance-led content strategies"].map((s,i) => (
+                <div key={i} style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"5px" }}>
+                  <span style={{ width:"3px", height:"3px", borderRadius:"50%", background:"#c8a96e", flexShrink:0 }} />
+                  <span className="sans" style={{ fontSize:"0.82rem", color:"#444" }}>{s}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div style={{ flex:"1 1 300px", display:"flex", flexDirection:"column", gap:"0.8rem", opacity:vis?1:0, transform:vis?"none":"translateX(30px)", transition:"all 0.8s ease 0.2s" }}>
-            {[{num:"01",title:"Creative",desc:"Content that stops the scroll and sparks conversation."},
-              {num:"02",title:"Strategic",desc:"Data-driven planning and precise brand positioning."},
-              {num:"03",title:"Growth",desc:"Results that compound — followers, reach, and revenue."}
+            <div style={{ marginBottom:"0.6rem" }}>
+              <span className="sans" style={{ fontSize:"0.6rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"#c8a96e" }}>My Approach</span>
+            </div>
+            {[
+              {num:"01",title:"Brand Alignment",     desc:"Understanding the brand voice, positioning, and audience behavior."},
+              {num:"02",title:"Content Strategy",    desc:"Designing content pillars that balance value, relatability, and virality."},
+              {num:"03",title:"Execution Excellence",desc:"From ideation → shoot → edit → publish → optimize."},
+              {num:"04",title:"Performance Tracking",desc:"Every piece measured — reach, engagement, retention, and growth."},
+              {num:"05",title:"Iteration & Scaling", desc:"Doubling down on what works and evolving continuously."},
             ].map((a,i) => (
-              <div key={i} style={{ padding:"1.6rem 2rem", background:"#0c0c0c", border:"1px solid rgba(200,169,110,0.08)", borderRadius:"2px", display:"flex", gap:"1.5rem", alignItems:"flex-start" }}>
-                <span className="serif" style={{ fontSize:"0.75rem", color:"#c8a96e", opacity:0.4, flexShrink:0, marginTop:"2px" }}>{a.num}</span>
+              <div key={i} style={{ padding:"1.2rem 1.6rem", background:"#0c0c0c", border:"1px solid rgba(200,169,110,0.08)", borderRadius:"2px", display:"flex", gap:"1.2rem", alignItems:"flex-start" }}>
+                <span className="serif" style={{ fontSize:"0.72rem", color:"#c8a96e", opacity:0.4, flexShrink:0, marginTop:"2px" }}>{a.num}</span>
                 <div>
-                  <div className="sans" style={{ fontSize:"0.95rem", color:"#f0ebe0", fontWeight:500, marginBottom:"0.4rem" }}>{a.title}</div>
-                  <div className="sans" style={{ fontSize:"0.82rem", color:"#444", lineHeight:1.65 }}>{a.desc}</div>
+                  <div className="sans" style={{ fontSize:"0.88rem", color:"#f0ebe0", fontWeight:500, marginBottom:"0.3rem" }}>{a.title}</div>
+                  <div className="sans" style={{ fontSize:"0.8rem", color:"#444", lineHeight:1.6 }}>{a.desc}</div>
                 </div>
               </div>
             ))}
-          </div>
         </div>
+      </div>
       </div>
     </section>
   );
@@ -778,9 +789,9 @@ function Quote() {
       <div style={{ maxWidth:"720px", margin:"0 auto", opacity:vis?1:0, transform:vis?"none":"translateY(30px)", transition:"all 1s ease" }}>
         <span style={{ fontSize:"3rem", color:"rgba(200,169,110,0.15)", fontFamily:"Georgia,serif", lineHeight:1 }}>"</span>
         <p className="serif" style={{ fontSize:"clamp(1.4rem,3.5vw,2.2rem)", fontWeight:300, color:"#f0ebe0", lineHeight:1.4, fontStyle:"italic", margin:"-1rem 0 1.5rem" }}>
-          Creativity attracts attention.<br /><span className="gold-text">Strategy converts it into growth.</span>
+          I don't just manage social media —<br /><span className="gold-text">I build brands that people remember,<br />engage with, and come back to.</span>
         </p>
-        <span className="sans" style={{ fontSize:"0.7rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"#2a2a2a" }}>— Naveen Rajendran</span>
+        <span className="sans" style={{ fontSize:"0.7rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"#2a2a2a" }}>— Naveen R</span>
       </div>
     </section>
   );
@@ -849,7 +860,7 @@ function Footer() {
     <footer style={{ padding:"24px", borderTop:"1px solid rgba(200,169,110,0.06)", background:"#070707" }}>
       <div style={{ padding:"0 clamp(1.5rem,4vw,4rem)", display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-between", gap:"1rem", maxWidth:"1200px", margin:"0 auto" }}>
         <span className="serif" style={{ color:"#c8a96e", fontSize:"1rem" }}>NR</span>
-        <span className="sans" style={{ fontSize:"0.65rem", color:"#1e1e1e", letterSpacing:"0.1em" }}>© 2025 Naveen Rajendran · Social Media Consultant</span>
+        <span className="sans" style={{ fontSize:"0.65rem", color:"#1e1e1e", letterSpacing:"0.1em" }}>© 2025 Naveen R · Social Media Strategist</span>
         <div style={{ display:"flex", gap:"1.5rem" }}>
           {["Work","About","Contact"].map(l => (
             <button key={l} className="sans" onClick={() => document.getElementById(l.toLowerCase())?.scrollIntoView({ behavior:"smooth" })}
